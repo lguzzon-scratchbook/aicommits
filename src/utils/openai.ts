@@ -58,7 +58,7 @@ const sanitizeMessage = (message: string) => message.trim().replace(/[\n\r]/g, '
 
 const deduplicateMessages = (array: string[]) => Array.from(new Set(array));
 
-const getPrompt = (locale: string, diff: string) => `Write an insightful but concise Git commit message in a complete sentence in present tense for the following diff without prefacing it with anything, the response must be in the language ${locale}:\n${diff}`;
+const getPrompt = (locale: string, diff: string) => `Write an insightful but concise Git commit message in a complete sentence in present tense using conventional commits standard form for the following diff without prefacing it with anything, the response must be in the language ${locale}:\n${diff}`;
 
 const model = 'text-davinci-003';
 const encoder = encodingForModel(model);
